@@ -6,14 +6,14 @@ const Category = () => {
   const { data: categories, refetch } = useQuery({
     queryKey: ["category"],
     queryFn: async () => {
-      const res = await fetch("http://localhost:5000/categories");
+      const res = await fetch("https://backend-ecru-tau.vercel.app/categories");
       const data = await res.json();
       return data;
     },
   });
 
   const handleDelete = (name) => {
-    fetch("http://localhost:5000/categories", {
+    fetch("https://backend-ecru-tau.vercel.app/categories", {
       method: "DELETE",
       headers: {
         "content-type": "application/json",

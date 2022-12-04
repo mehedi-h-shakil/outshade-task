@@ -10,7 +10,7 @@ const AddCategory = () => {
     const name = {
       name: data.category,
     };
-    fetch("http://localhost:5000/addCategory", {
+    fetch("https://backend-ecru-tau.vercel.app/addCategory", {
       method: "POST",
       headers: {
         "content-type": "application/json",

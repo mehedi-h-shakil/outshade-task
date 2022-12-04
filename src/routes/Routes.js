@@ -5,6 +5,7 @@ import ProductByCategory from "../components/ProductByCategory";
 import ProfileUpdate from "../components/ProfileUpdate";
 import Main from "../layout/Main";
 import ForgetPassword from "../pages/forgetPassword/ForgetPassword";
+import AllProducts from "../pages/home/AllProducts";
 import Category from "../pages/home/Category";
 import Login from "../pages/login/Login";
 import Signup from "../pages/signup/Signup";
@@ -23,13 +24,20 @@ export const router = createBrowserRouter([
         element: <Category />,
       },
       {
+        path: "/products",
+        element: <AllProducts />,
+      },
+
+      {
         path: "/addCategory",
         element: <AddCategory />,
       },
       {
         path: "/productsByCategory/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/productsByCategory/${params.id}`),
+          fetch(
+            `https://backend-ecru-tau.vercel.app/productsByCategory/${params.id}`
+          ),
         element: <ProductByCategory />,
       },
       {

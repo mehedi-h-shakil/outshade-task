@@ -43,7 +43,7 @@ const ProductModal = ({ product }) => {
   // const handleUpdate = (id) => {
   //   const productId = id;
   //   console.log(productId);
-  //   // fetch("http://localhost:5000/productUpdate", {
+  //   // fetch("https://backend-ecru-tau.vercel.app/productUpdate", {
   //   //   method: "PUT",
   //   //   headers: {
   //   //     "content-type": "application/json",

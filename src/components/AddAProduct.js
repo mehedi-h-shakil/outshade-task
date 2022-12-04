@@ -42,7 +42,7 @@ const AddAProduct = () => {
 
   const saveProduct = (product) => {
     // console.log(product);
-    fetch("http://localhost:5000/addProducts", {
+    fetch("https://backend-ecru-tau.vercel.app/addProducts", {
       method: "POST",
       headers: {
         "content-type": "application/json",

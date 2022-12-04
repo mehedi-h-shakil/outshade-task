@@ -5,7 +5,7 @@ const ProductTable = ({ products, setLoading }) => {
   const handleDelete = (id) => {
     setLoading(true);
     const productId = id;
-    fetch("http://localhost:5000/productDelete", {
+    fetch("https://backend-ecru-tau.vercel.app/productDelete", {
       method: "DELETE",
       headers: {
         "content-type": "application/json",
